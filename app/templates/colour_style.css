@@ -1,0 +1,29 @@
+.header {
+    height: 150px;
+    background-color: #000000;
+    color: #FFFFFF;
+    text-align:center;
+}
+
+.menu {
+    float: left;
+    width: 150px;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.content {
+    float: left;
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -100px;
+    vertical-align:bottom;
+}
+
+.footer {
+    background-color: #000000;
+    color: #FFFFFF;
+    clear: both;
+    text-align:center;
+}
