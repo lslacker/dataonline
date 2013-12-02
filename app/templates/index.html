@@ -4,26 +4,28 @@
     <title>{{title}} - microblog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.css') }}">
-     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/custom.css') }}">
 </head>
 <body>
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        Data Online
-    </nav>
 
+    <div class="container" class="col-md-6">
 
-    <div class="row">
-        <div class="col-md-2">.col-md-2</div>
-        <div class="col-md-8">.col-md-8</div>
-        <div class="col-md-4">.col-md-4</div>
+      <form class="form-signin">
+        <h2 class="form-signin-heading">Login</h2>
+        Username:<input type="text" class="form-control" placeholder="Username">
+        Password:<input type="password" class="form-control" placeholder="Password">
+        <label class="checkbox">
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+      </form>
+
     </div>
 
-    <form>
-    First name: <input type="text" name="firstname"><br>
-    Middle name: <input type="text" name="middlename"><br>
-    Last name: <input type="text" name="lastname">
-    </form>
-
+    <!--<div class="container">
+        <div class="col-md-2">.col-md-2</div>
+        <div class="col-md-8 col-md-offset-2">.col-md-8 offset 2</div>
+        <div class="col-md-2">.col-md-4</div>
+    </div>-->
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>
