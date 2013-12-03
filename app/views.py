@@ -12,7 +12,7 @@ def load_user(id):
 
 @app.route('/')
 @app.route('/index')
-
+@login_required
 def index():
     user = { 'nickname': 'Miguel' } # fake user
     return render_template("index.html",
@@ -20,11 +20,10 @@ def index():
         user = user)
 
 
-
-
 @app.route("/login", methods=["GET", "POST"])
 def login():
-    return "You need to login first"
+    return render_template("login.html")
+
 
 @app.route('/about')
 def about():
