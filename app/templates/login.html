@@ -4,11 +4,11 @@
         <title>{{title}} - microblog</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.css') }}">
-        <link href="css/bootstrap.gary.css" rel="stylesheet">
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.gary.css') }}">
     </head>
     <body>
 
-        <div class="container cust-form">
+        <div class="container">
             <form>
                 <h2 class="form-signin-heading">Login</h2>
                 <input type="text" class="form-control" placeholder="Username" autofocus>
