@@ -1,9 +1,16 @@
 body {
-    background: url('images/background.png') no-repeat scroll center;
+  	margin: 0;
+	padding: 0;
+    background: url('../images/background.png') no-repeat scroll center 211px #DCDCD6;
 }
 
 .container {
-    width: 450px;
-    padding: 15px;
-    margin: 0 auto;
+    width: 350px;
+    padding: 10px;
+    margin-top: 100px;
+}
+
+.form{
+    background-color: #ebebeb;
+    padding: 20px;
 }
