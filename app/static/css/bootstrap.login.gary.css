@@ -1,17 +1,5 @@
-body {
-  	margin: 0;
-	padding: 0;
-    background: url('../images/background.png') no-repeat scroll center 211px #DCDCD6;
-}
-
-.container {
-    width: 350px;
-    padding: 10px;
-    margin-top: 100px;
-}
-
-.form{
-    background-color: #ebebeb;
-    padding: 20px;
-    border-radius: 10px;
+.shadow {
+    -webkit-box-shadow: 0 12px 6px -6px black;
+       -moz-box-shadow: 0 12px 6px -6px black;
+            box-shadow: 0 12px 6px -6px black;
 }

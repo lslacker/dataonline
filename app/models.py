@@ -22,8 +22,14 @@ class User(db.Model):
     def check_password(self, password):
         return check_password_hash(self.passwd, password)
 
-class Gary(db.Model):
-    __tablename__ = 'gary'
+    def is_authenticated(self):
+        return True
 
-    id = db.Column(db.Integer, primary_key=True)
-    username = db.Column(db.String(50))
+    def is_active(self):
+        return True
+
+    def is_anonymous(self):
+        return False
+
+    def get_id(self):
+        return unicode(self.id)

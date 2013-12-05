@@ -1,32 +1,109 @@
+{% from "_formhelpers.html" import render_field %}
 <!DOCTYPE html>
 <html>
     <head>
-        <title>{{title}} - microblog</title>
+        <title>{{title}} - DataOnline</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.css') }}">
-        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.login.gary.css') }}">
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.gary.css') }}">
+        <link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Finger+Paint' rel='stylesheet' type='text/css'>
+        <style type="text/css">
+            html,
+            body {
+                margin-top: 30px;
+                height: 95%;
+                background: url('../static/images/background.png') no-repeat scroll center 211px #DCDCD6;
+                font-family: 'Droid Sans', sans-serif;
+            }
+            #wrap {
+                min-height: 100%;
+                height: auto !important;
+                height: 100%;
+                /* Negative indent footer by it's height */
+                margin: 0 auto -40px;
+            }
+
+            .custom-container {
+                width: 350px;
+                padding: 30px;
+                background: #c5c5be url('../static/images/user_key21.png') no-repeat top left;
+                -webkit-border-radius: 15px;
+                   -moz-border-radius: 15px;
+                        border-radius: 15px;
+            }
+
+            .form {
+
+                padding: 20px;
+                background-color: #dcdcd6;
+                -webkit-border-radius: 15px;
+                   -moz-border-radius: 15px;
+                        border-radius: 15px;
+            }
+            input[type="checkbox"] {
+                width: 20px;
+                height: 20px;
+            }
+            .form-signin-heading {
+                font-family: 'Finger Paint', cursive;
+                text-align: right;
+            }
+            /* Set the fixed height of the footer here */
+            #push,
+            #footer {
+                height: 40px;
+            }
+
+            #footer .container {
+                text-align: center;
+            }
+
+        </style>
     </head>
     <body>
-        <div class="container">
-            <h2 class="form-signin-heading">Login</h2>
-            <form class="form">
-                <input type="text" class="form-control" placeholder="Username" autofocus>
-                <input type="password" class="form-control" placeholder="Password">
-                <label class="checkbox">
-                    <input type="checkbox" value="remember-me"> Remember me
-                </label>
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-            </form>
-        </div>
-        <!--</div>-->
-        <!--<div class="container">
-            <div class="col-md-2">.col-md-2</div>
-            <div class="col-md-8 col-md-offset-2">.col-md-8 offset 2</div>
-            <div class="col-md-2">.col-md-4</div>
-        </div>-->
-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-        <script src="https://code.jquery.com/jquery.js"></script>
-        <!-- Include all compiled plugins (below), or include individual files as needed -->
-        <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+        <div id="wrap">
+            {# DISPLAY FLASH MESSAGES #}
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <div class="alert alert-danger">
+
+                {% for message in messages %}
+                <strong>{{ message }} </strong>
+                {% endfor %}
+            </div>
+            {% endif %}
+            {% endwith %}
+            <div class="container custom-container">
+                <h3 class="form-signin-heading">DATA ONLINE</h3>
+
+
+                <form class="form shadow" action="{{ url_for('login') }}" method=post>
+                    {{ form.hidden_tag() }}
+
+                    {{ render_field(form.username,placeholder="Username", class="form-control", autofocus="autofocus") }}
+                    {{ render_field(form.password,placeholder="Password", class="form-control") }}
+                    {{ render_field(form.remember_me, class="checkbox") }}
+
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                </form>
+            </div> <!-- container -->
+
+            <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+            <script src="https://code.jquery.com/jquery.js"></script>
+            <!-- Include all compiled plugins (below), or include individual files as needed -->
+            <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+            <script type="text/javascript">
+
+                window.setTimeout(function() { $(".alert").alert('close'); }, 2000);
+            </script>
+
+            <div id="push"></div>
+        </div> <!-- wrap -->
+        <div id="footer">
+            <div class="container">
+                </strong><p class="muted credit">&copy; Copyright 2013-2014 Melbourne Mailing Pty Ltd <a href="mailto:it@melmailing.com.au">IT Department</a> .</p>
+            </div>
+        </div> <!-- footer -->
     </body>
 </html>
