@@ -1,22 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>{{title}} - microblog</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.css') }}">
-</head>
-<body>
-
-
-    <div class="container">
-        <div class="col-md-2">.col-md-2</div>
-        <div class="col-md-8 col-md-offset-2">.col-md-8 offset 2</div>
-        <div class="col-md-2">.col-md-4</div>
-    </div>
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://code.jquery.com/jquery.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
-</body>
+    <head>
+        <title>{{title}} - microblog</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.css') }}">
+        <link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/bootstrap.index.gary.css') }}">
+    </head>
+    <body>
+        <div id="header">
+            <div class="container">
+                testtesttest
+            </div>
+        </div>
+        <div class="'job-search">
+            <form class="form">
+                <div class="col-md-3 col-md-offset-2">
+                    <input type="text" class="form-control" placeholder="Job Search" autofocus>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-lg btn-primary btn-block" type="submit">Search</button>
+                </div>
+            </form>
+        </div>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://code.jquery.com/jquery.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    </body>
 </html>
