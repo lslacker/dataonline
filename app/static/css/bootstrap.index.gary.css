@@ -1,4 +1,4 @@
-<!--body {
+/*body {
   	margin: 0;
 	padding: 0;
     background: url('../images/background.png') no-repeat scroll center 211px #DCDCD6;
@@ -14,11 +14,40 @@
     background-color: #ebebeb;
     padding: 20px;
     border-radius: 10px;
-}-->
+}*/
 
-.container {
-    padding-left: 15px;
-    padding-right: 15px;
-    height: 30px;
-    background-color: #f5f5f5;
+body {
+    font-family: 'Electrolize', sans-serif;
+}
+
+#header {
+    height: 80px;
+    background-color: #c5c5be;
+    padding-top: 22px;
+}
+
+#header > .container {
+    margin-left: 40px;
+    font-size: 175%;
+}
+
+#sidebar {
+    float:left;
+    background-color: #c5c5be;
+    height:100%;
+    width:130px;
+    font-size:14px;
+    position:absolute;
+}
+
+#sidebar > .menu{
+    margin-top: 20px;
+    margin-left: 40px;
+    font-size: 140%;
+}
+
+#job-search > .container {
+    margin-top: 30px;
+    margin-left: 40px;
+    font-size: 175%;
 }
