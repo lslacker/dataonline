@@ -15,11 +15,11 @@ def add_users(username, password, nickname):
 
 
 if __name__ == '__main__':
-    #db.drop_all()
-    #db.create_all()
+    db.drop_all()
+    db.create_all()
     #-- Luan Mai
     #add_users('gary', 'abc123', 'Gary Thomson')
-    users = models.User.query.all()
-    for user in users:
-        print user.username
-        print user.check_password('abc123')
+    #users = models.User.query.all()
+    #for user in users:
+    #    print user.username
+    #    print user.check_password('abc123')
